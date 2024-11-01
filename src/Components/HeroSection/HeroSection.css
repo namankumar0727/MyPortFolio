@@ -1,0 +1,463 @@
+@import url('https://fonts.googleapis.com/css2?family=Be+Vietnam+Pro:wght@300&display=swap');
+
+:root{
+    --clr-black: #000;
+    --clr-white: #fff;
+    --clr-orange: #e84949;
+    --clr-light-gray: #E7E7E7;
+    --clr-blue: #4e45d5;
+    --clr-dark-blue: #343d68;
+}
+@media only screen and (max-width: 1300px){
+    
+:root{
+    --clr-black: #000;
+    --clr-white: #fff;
+    --clr-orange: #e84949;
+    --clr-light-gray: #E7E7E7;
+    --clr-blue: #4e45d5;
+    --clr-dark-blue: #343d68;
+}
+
+
+.hero-section{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 5rem;
+    padding-top: 3rem;
+    padding-bottom: 12.8rem;
+    margin: 8.4rem auto;
+    position: relative;
+}
+    .hero-section .faded-text {
+        font-size: 8rem;
+        left: -2%;
+    }
+
+
+
+    
+
+    /* hero section left */
+    .hero-section .hero-section-left{
+        display: flex;
+        flex-direction: column;
+        gap: 3.2rem;
+    }
+
+    .hero-section-left .name{
+        font-size: 3.5rem;
+        font-weight: 500;
+        color: var(--clr-dark-blue);
+    }
+
+    .hero-section-left .profession{
+        font-size: 3.5rem;
+        font-weight: 500;
+        color: var(--clr-dark-blue);
+    }
+
+    .hero-section-left .profession .role{
+        color: var(--clr-blue);
+        font-weight: 800;
+    }
+
+    .hero-section-left .desc{
+        width: 60%;
+        font-size: 1.6rem;
+    }
+
+    /* hero-section-right */
+    .hero-section .hero-section-right{
+        position: relative;
+    }
+
+    .hero-section-right > *:not(.my-image){
+        position: absolute;
+    }
+    .my-image img{
+        
+        width: 400px;
+        height: 400px;
+    }
+    .hero-section-right .my-image{
+        margin-right: 80px;
+        padding: 2rem;
+        filter: grayscale(1);
+        animation: scaleImage 5s linear infinite;
+    }
+
+}
+
+a{
+    text-decoration: none;
+    color: inherit;
+}
+
+.container{
+    max-width: 1250px;
+    padding-left: 2.5rem;
+    padding-right: 2.5rem;
+    margin: 0 auto;
+}
+
+section > h2{
+    font-size: 9rem;
+    color: var(--clr-orange);
+    text-transform: capitalize;
+}
+
+.btn{
+    width: fit-content;
+    font-family: inherit;
+    font-size: 1.8rem;
+    font-weight: 500;
+    color: var(--clr-white);
+    background-color: var(--clr-orange);
+    border: solid 3px transparent;
+    padding: 1.3rem 3.7rem;
+    box-shadow: 5px 5px 7px 0px #0000003f;
+    overflow: hidden;
+    cursor: pointer;
+    z-index: 1;
+    transition: all 0.5s;
+    position: relative;
+}
+
+.btn::before{
+    content: "";
+    position: absolute;
+    background-color: var(--clr-white);
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    z-index: -1;
+    transform: scaleX(0);
+    transform-origin: left;
+    transition: all 0.8s;
+}
+
+.btn:hover {
+    color: var(--clr-black);
+}
+
+.btn:hover::before{
+    transform: scaleX(100%);
+}
+
+
+
+.hero-section{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-direction: column;
+    gap: 5rem;
+    padding-top: 3rem;
+    padding-bottom: 12.8rem;
+    margin: 8.4rem auto;
+    position: relative;
+}
+
+    
+
+    /* hero section left */
+    .hero-section .hero-section-left{
+        display: flex;
+        flex-direction: column;
+        gap: 3.2rem;
+    }
+
+    .hero-section-left .name{
+        font-size: 3.5rem;
+        font-weight: 500;
+        color: var(--clr-dark-blue);
+    }
+
+    .hero-section-left .profession{
+        font-size: 3.5rem;
+        font-weight: 500;
+        color: var(--clr-dark-blue);
+    }
+
+    .hero-section-left .profession .role{
+        color: var(--clr-blue);
+        font-weight: 800;
+    }
+
+    .hero-section-left .desc{
+        width: 80%;
+        font-size: 1.6rem;
+    }
+
+    /* hero-section-right */
+    .hero-section .hero-section-right{
+        position: relative;
+    }
+
+    .hero-section-right > *:not(.my-image){
+        position: absolute;
+    }
+    .my-image img{
+        
+        width: 400px;
+        height: 400px;
+    }
+    .hero-section-right .my-image{
+        margin-right: 80px;
+        padding: 2rem;
+        filter: grayscale(1);
+        animation: scaleImage 5s linear infinite;
+    }
+
+    @keyframes scaleImage {
+        0% {
+            filter: grayscale(1);
+            scale: 1;
+        }
+        50% {
+            filter: grayscale(0);
+            scale: 0.9;
+            box-shadow: 3px 3px 10px #000;
+        }
+        100% {
+            filter: grayscale(1);
+            scale: 1;
+        }
+    }
+
+    /* ///zigzag icon */
+    .hero-section-right .icon-zigzag{
+        top: 2.4rem;
+        left: -0.48rem;
+        animation: zigzagAnimation 5s ease-in infinite;
+    }
+
+    @keyframes zigzagAnimation {
+        50% {
+            top: 2%;
+            left: 5%;
+        }
+    }
+
+    /* ////////// plus icon  */
+    .hero-section-right .icon-plus{
+        top: -1.3rem;
+        left: 50%;
+        animation: shakeEffectPlus 5s ease-in infinite;
+    }
+
+    @keyframes shakeEffectPlus {
+    50%{ 
+        top: 3%;
+        left: 48%;
+    }
+    }
+
+    /* ////// cube icon */
+    .hero-section-right .icon-cube{
+        top: -1.3rem;
+        right: 4.2rem;
+        animation: cubeRotate 3s ease infinite;
+    }
+
+    @keyframes cubeRotate {
+        0% {
+            transform: rotateY(0deg) translateY(0px);
+        }
+        50% {
+            transform: rotateY(180deg) translateY(-1.2rem);
+        }
+        100% {
+            transform: rotateY(360deg) translateY(0px);
+        }
+    }
+
+    /* ////circle icon */
+    .hero-section-right .icon-circle{
+        bottom: 0;
+        left: 0;
+        animation: shakeEffectCircle 6s linear infinite;
+    }
+
+    @keyframes shakeEffectCircle {
+        50%{
+            bottom: 10%;
+            left: 5%;
+        }
+    }
+
+    /* ///////// dots icon  */
+    .hero-section-right .icon-dots{
+        bottom: -1.6rem;
+        right: 2rem;
+        animation: dotsAnimation 5s ease infinite;
+    }
+
+    @keyframes dotsAnimation {
+        0%{
+            transform: translateY(0);
+        }
+        50%{
+            transform: translateY(-1.6rem);
+        }
+        100%{
+            transform: translateY(0);
+        }
+    }
+
+    
+    @media only screen and (max-width: 800px){
+
+    
+    
+
+.hero-section{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 3rem;
+    padding-top: 3rem;
+    padding-bottom: 12.8rem;
+    margin: 8.4rem auto;
+    position: relative;
+}
+    
+
+    /* hero section left */
+    .hero-section .hero-section-left{
+        display: flex;
+        flex-direction: column;
+        gap: 3.2rem;
+    }
+    @import url('https://fonts.googleapis.com/css2?family=Be+Vietnam+Pro:wght@300&display=swap');
+
+
+    .hero-section-left .name{
+        font-size: 2rem;
+        font-weight: 500;
+        color: var(--clr-dark-blue);
+    }
+
+    .hero-section-left .profession{
+        font-size: 1.7rem;
+        font-weight: 500;
+        color: var(--clr-dark-blue);
+    }
+
+    .hero-section-left .profession .role{
+        color: var(--clr-blue);
+        font-weight: 800;
+    }
+
+    .hero-section-left .desc{
+        width: 100%;
+        font-size: 1.3rem;
+    }
+
+    /* hero-section-right */
+    .hero-section .hero-section-right{
+        position: relative;
+    }
+
+    .hero-section-right > *:not(.my-image){
+        position: absolute;
+    }
+    .my-image{
+        margin-left: 50px;
+        margin-top: 40px;
+    }
+    .my-image img{
+        width: 200px;
+        height: 200px;
+    }
+    .hero-section-right .my-image{
+        margin-right: 80px;
+        padding: 2rem;
+        filter: grayscale(1);
+        animation: scaleImage 5s linear infinite;
+    }
+
+    }
+.hero-section{
+
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-direction: row;
+    gap: 3rem;
+    padding-top: 2rem;
+    padding-bottom: 12.8rem;
+    
+    margin: 6.4rem auto;
+    position: relative;
+}
+.hero-section .faded-text {
+    font-size: 11.2rem;
+    font-weight: 700;
+    color: var(--clr-light-gray);
+    user-select: none;  
+    transition: all 3s;    
+    z-index: -1;
+    position: absolute;
+    bottom: -16%;
+    left: 2%;
+    padding-bottom: 5rem;
+}
+
+    
+
+    /* hero section left */
+    .hero-section .hero-section-left{
+        display: flex;
+        flex-direction: column;
+        gap: 3.2rem;
+    }
+
+    .hero-section-left .name{
+        font-size: 4rem;
+        font-weight: 500;
+        color: var(--clr-dark-blue);
+    }
+
+    .hero-section-left .profession{
+        font-size: 3.4rem;
+        font-weight: 500;
+        color: var(--clr-dark-blue);
+    }
+
+    .hero-section-left .profession .role{
+        color: var(--clr-blue);
+        font-weight: 800;
+    }
+
+    .hero-section-left .desc{
+        width: 80%;
+        font-size: 1.5rem;
+    }
+
+    /* hero-section-right */
+    .hero-section .hero-section-right{
+        position: relative;
+    }
+
+    .hero-section-right > *:not(.my-image){
+        position: absolute;
+    }
+    .my-image{
+        margin-left: 50px;
+        margin-top: 40px;
+    }
+    .my-image img{
+        width: 400px;
+        height: 400px;
+    }
+    .hero-section-right .my-image{
+        margin-right: 80px;
+        padding: 2rem;
+        filter: grayscale(1);
+        animation: scaleImage 5s linear infinite;
+    }
+
